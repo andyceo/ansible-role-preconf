@@ -35,6 +35,7 @@ preconf:
     - dar
     - rar
     - p7zip
+    - pwgen
     - subversion
     - git-svn
     - lynx
