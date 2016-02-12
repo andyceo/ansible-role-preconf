@@ -30,6 +30,7 @@ preconf:
     - iotop
     - itop
     - lynx
+    - mcelog
     - mytop
     - ncurses-term
     - nethogs
