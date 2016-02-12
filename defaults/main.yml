@@ -12,42 +12,42 @@ preconf:
     # 2. Then "sudo sysctl -p" to apply changes immediately
     fs.inotify.max_user_watches: 524288
   utilities:
-    - aptitude
-    - python-software-properties
-    - bc
-    - sudo
-    - htop
-    - iotop
-    - itop
-    - iftop
-    - mytop
-    - atop
-    - powertop
-    - apachetop
-    - visitors
-    - fortunes-ubuntu-server
-    - nmap
-    - grc
-    - tree
-    - traceroute
     - acl
-    - nethogs
-    - dar
-    - rar
-    - p7zip
-    - pwgen
-    - subversion
-    - git-svn
-    - lynx
+    - apachetop
+    - aptitude
+    - atop
+    - bc
     - ccze
     - curl
+    - dar
     - dstat
-    - sysstat
-    - smartmontools
-    - tcpdump
-    - wget
-    - vim
-    - tmux
     - facter
+    - fortunes-ubuntu-server
+    - git-svn
+    - grc
+    - htop
+    - iftop
+    - iotop
+    - itop
+    - lynx
+    - mytop
     - ncurses-term
+    - nethogs
+    - nmap
+    - p7zip
+    - powertop
+    - pwgen
+    - python-software-properties
+    - rar
+    - smartmontools
+    - subversion
+    - sudo
+    - sysstat
     - sysv-rc-conf
+    - tcpdump
+    - tmux
+    - traceroute
+    - tree
+    - vim
+    - visitors
+    - wget
