@@ -5,10 +5,10 @@
 
 - name: Installing useful utilities
   apt: pkg={{ item }}
-  with_items: preconf.utilities
+  with_items: "{{ preconf.utilities }}"
 
 - name: Apply sysctl settings
   sysctl:
     name={{ item.key }}
     value={{ item.value }}
-  with_dict: preconf.sysctl
+  with_dict: "{{ preconf.sysctl }}"
