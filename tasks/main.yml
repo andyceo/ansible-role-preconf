@@ -12,3 +12,19 @@
     name={{ item.key }}
     value={{ item.value }}
   with_dict: "{{ preconf.sysctl }}"
+
+- name: Apply hostname
+  hostname:
+    name={{ preconf.hostname.hostname }}
+  notify: hostname-restart
+  when: "{{ preconf.hostname.apply }}"
+
+- name: Apply FQDN hostname to /etc/hosts and others hosts parameters
+  template:
+    src=hosts.j2
+    dest=/etc/hosts
+    owner=root
+    group=root
+    mode=0644
+  notify: hostname-restart
+  when: "{{ preconf.hostname.apply }}"

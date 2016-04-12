@@ -1,5 +1,12 @@
 ---
+
 preconf:
+  hostname:
+    apply: no
+    hostname: example
+    fqdn: example.org
+    ipv4: 127.0.1.1
+  hosts: ''
   sysctl:
     # Next is Dropbox and PhpStorm issue:
     #
