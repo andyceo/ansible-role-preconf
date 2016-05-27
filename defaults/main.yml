@@ -57,5 +57,6 @@ preconf:
     - traceroute
     - tree
     - vim
-    - visitors
+# visitors is not available in Ubuntu 16.04 Xenial
+#    - visitors
     - wget
