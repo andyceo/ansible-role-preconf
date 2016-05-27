@@ -9,8 +9,9 @@ galaxy_info:
   license: "license (BSD, MIT)"
   min_ansible_version: 1.5
   platforms:
-  - name: Ubuntu
-    versions:
-    - trusty
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
   categories:
     - system
