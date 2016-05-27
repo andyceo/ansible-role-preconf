@@ -13,10 +13,12 @@
     value={{ item.value }}
   with_dict: "{{ preconf.sysctl }}"
 
+# The hostname service runs hostname -b -F /etc/hostname (see /etc/init/hostname.conf), which exits after setting
+# the hostname, so it doesn't continue running. The following is not working on Ubuntu 16.04 Xenial:
+# sudo service hostname restart
 - name: Apply hostname
   hostname:
     name={{ preconf.hostname.hostname }}
-  notify: hostname-restart
   when: "{{ preconf.hostname.apply }}"
 
 - name: Apply FQDN hostname to /etc/hosts and others hosts parameters
@@ -26,5 +28,4 @@
     owner=root
     group=root
     mode=0644
-  notify: hostname-restart
   when: "{{ preconf.hostname.apply }}"
