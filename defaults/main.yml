@@ -51,12 +51,13 @@ preconf:
     - subversion
     - sudo
     - sysstat
-    - sysv-rc-conf
+# It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
+#    - sysv-rc-conf
     - tcpdump
     - tmux
     - traceroute
     - tree
     - vim
-# visitors is not available in Ubuntu 16.04 Xenial
+# visitors is not available in Ubuntu 16.04 Xenial Xerus
 #    - visitors
     - wget
