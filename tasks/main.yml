@@ -10,6 +10,13 @@
     update_cache=yes
     upgrade=yes
 
+# This is "standard system utilities" metapackage.
+# @see sudo tasksel --task-package standard
+- name: Install ubuntu standard utilities
+  apt:
+    pkg=ubuntu-standard
+    install_recommends=yes
+
 - name: Installing useful utilities
   apt: pkg={{ item }}
   with_items: "{{ preconf.utilities }}"
