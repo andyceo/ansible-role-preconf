@@ -29,6 +29,7 @@ preconf:
     - dar
     - dstat
     - facter
+    - fail2ban
     - fortunes-ubuntu-server
     - git-svn
     - grc
