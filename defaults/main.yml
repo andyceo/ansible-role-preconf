@@ -41,6 +41,7 @@ preconf:
     - lynx
     - mcelog
     - mytop
+    - ncdu
     - ncurses-term
     - nethogs
     - nmap
