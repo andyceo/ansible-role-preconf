@@ -21,6 +21,7 @@ preconf:
   utilities:
     - acl
     - apachetop
+    - apt-file
     - aptitude
     - atop
     - bc
@@ -48,6 +49,8 @@ preconf:
     - pwgen
     - python-software-properties
     - rar
+    - rsnapshot
+    - rsync
     - smartmontools
     - subversion
     - sudo
