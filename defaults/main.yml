@@ -34,10 +34,12 @@ preconf:
     - fortunes-ubuntu-server
     - git-svn
     - grc
+    - hddtemp
     - htop
     - iftop
     - iotop
     - itop
+    - lm-sensors
     - lynx
     - mc
     - mcelog
