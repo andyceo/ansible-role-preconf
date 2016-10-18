@@ -4,8 +4,7 @@
 ## systemd
 
 - name: systemd-daemon-reload
-  systemd: daemon_reload=yes
-
+  command: systemctl --system daemon-reload
 
 ## hddtemp service
 
