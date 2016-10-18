@@ -1,0 +1,25 @@
+---
+
+
+## systemd
+
+- name: systemd-daemon-reload
+  systemd: daemon_reload=yes
+
+
+## hddtemp service
+
+- name: hddtemp-start
+  service:
+    name=hddtemp
+    state=started
+
+- name: hddtemp-stop
+  service:
+    name=hddtemp
+    state=stopped
+
+- name: hddtemp-restart
+  service:
+    name=hddtemp
+    state=restarted
