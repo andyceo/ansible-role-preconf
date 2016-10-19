@@ -12,13 +12,16 @@
   service:
     name=hddtemp
     state=started
+    enabled=yes
 
 - name: hddtemp-stop
   service:
     name=hddtemp
     state=stopped
+    enabled=yes
 
 - name: hddtemp-restart
   service:
     name=hddtemp
     state=restarted
+    enabled=yes
