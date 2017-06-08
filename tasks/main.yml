@@ -2,6 +2,8 @@
 
 - name: Install dependencies for Ansible apt module
   command: apt-get install -y python-apt aptitude
+  args:
+    warn: no
   register: preconf_apt_dependencies_installed
   changed_when: "'is already the newest version' not in preconf_apt_dependencies_installed.stdout"
 
@@ -34,7 +36,7 @@
 - name: Apply hostname
   hostname:
     name={{ preconf.hostname.hostname }}
-  when: "{{ preconf.hostname.apply }}"
+  when: preconf.hostname.apply
 
 - name: Apply FQDN hostname to /etc/hosts and others hosts parameters
   template:
@@ -43,4 +45,4 @@
     owner=root
     group=root
     mode=0644
-  when: "{{ preconf.hostname.apply }}"
+  when: preconf.hostname.apply
