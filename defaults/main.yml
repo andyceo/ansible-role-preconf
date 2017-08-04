@@ -40,6 +40,7 @@ preconf:
     - iotop
     - itop
     - lm-sensors
+    - lsscsi
     - lynx
     - mc
     - mcelog
