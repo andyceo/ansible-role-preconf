@@ -37,6 +37,7 @@ preconf:
     - hddtemp
     - htop
     - iftop
+    - ioping
     - iotop
     - itop
     - lm-sensors
