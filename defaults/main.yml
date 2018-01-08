@@ -71,3 +71,4 @@ preconf:
 # visitors is not available in Ubuntu 16.04 Xenial Xerus
 #    - visitors
     - wget
+    - zram-config
