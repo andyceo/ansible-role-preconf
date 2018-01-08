@@ -18,21 +18,32 @@ preconf:
     # 1. In file "/etc/sysctl.conf" change/add row: "fs.inotify.max_user_watches = 524288"
     # 2. Then "sudo sysctl -p" to apply changes immediately
     fs.inotify.max_user_watches: 524288
+  suggested:
+    - apachetop
+    - atop
+    - dar
+    - dstat
+    - git-svn
+    - mytop
+    - lynx
+    - p7zip
+    - rar
+    - subversion
+    # It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
+#    - sysv-rc-conf
+    - vim
+    # visitors is not available in Ubuntu 16.04 Xenial Xerus
+#    - visitors
   utilities:
     - acl
-    - apachetop
     - apt-file
     - aptitude
-    - atop
     - bc
     - ccze
     - curl
-    - dar
-    - dstat
     - facter
     - fail2ban
     - fortunes-ubuntu-server
-    - git-svn
     - grc
     - hddtemp
     - htop
@@ -42,33 +53,23 @@ preconf:
     - itop
     - lm-sensors
     - lsscsi
-    - lynx
     - mc
     - mcelog
-    - mytop
     - ncdu
     - ncurses-term
     - nethogs
     - nmap
-    - p7zip
     - powertop
     - pwgen
     - python-software-properties
-    - rar
     - rsnapshot
     - rsync
     - smartmontools
-    - subversion
     - sudo
     - sysstat
-# It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
-#    - sysv-rc-conf
     - tcpdump
     - tmux
     - traceroute
     - tree
-    - vim
-# visitors is not available in Ubuntu 16.04 Xenial Xerus
-#    - visitors
     - wget
     - zram-config
