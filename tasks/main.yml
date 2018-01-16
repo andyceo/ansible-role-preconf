@@ -1,7 +1,7 @@
 ---
 
 - name: Install dependencies for Ansible apt* modules
-  command: apt-get -y install python-apt aptitude
+  command: apt-get -y install python-apt
   args:
     warn: no
   register: preconf_apt_dependencies_installed

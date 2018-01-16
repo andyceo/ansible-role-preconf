@@ -4,4 +4,4 @@ This role supposed to execute first and it checks that all packages are updated 
 
 ## Requirements
 
-Ubuntu 14.04
+Ubuntu 16.04

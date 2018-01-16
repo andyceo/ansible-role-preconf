@@ -7,11 +7,10 @@ galaxy_info:
   author: andyceo
   description: Preconf role for Ubuntu.
   license: "license (BSD, MIT)"
-  min_ansible_version: 1.5
+  min_ansible_version: 2.4
   platforms:
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
   categories:
     - system
