@@ -30,6 +30,11 @@
   apt: pkg={{ item }}
   with_items: "{{ preconf.utilities }}"
 
+- name: Remove apt outdated caches and packages
+  apt:
+    autoclean: yes
+    autoremove: yes
+
 - name: Apply sysctl settings
   sysctl:
     name={{ item.key }}
