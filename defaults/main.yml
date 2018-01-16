@@ -72,4 +72,3 @@ preconf:
     - traceroute
     - tree
     - wget
-    - zram-config
