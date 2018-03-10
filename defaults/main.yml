@@ -7,7 +7,7 @@ preconf:
     fqdn: example.org
     ipv4: 127.0.1.1
   hosts: ''
-  sysctl:
+  sysctl: {}
     # Next is Dropbox and PhpStorm issue:
     #
     # Dropbox:
@@ -17,12 +17,14 @@ preconf:
     # http://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
     # 1. In file "/etc/sysctl.conf" change/add row: "fs.inotify.max_user_watches = 524288"
     # 2. Then "sudo sysctl -p" to apply changes immediately
-    fs.inotify.max_user_watches: 524288
+#    fs.inotify.max_user_watches: 524288
   suggested:
     - apachetop
+    - aptitude
     - atop
     - dar
     - dstat
+    - fortunes-ubuntu-server
     - git-svn
     - mytop
     - lynx
@@ -37,13 +39,11 @@ preconf:
   utilities:
     - acl
     - apt-file
-    - aptitude
     - bc
     - ccze
     - curl
     - facter
     - fail2ban
-    - fortunes-ubuntu-server
     - grc
     - hddtemp
     - htop
