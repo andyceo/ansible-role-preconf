@@ -26,6 +26,7 @@ preconf:
     - dstat
     - fortunes-ubuntu-server
     - git-svn
+    - hddtemp
     - mytop
     - lynx
     - p7zip
@@ -45,7 +46,6 @@ preconf:
     - facter
     - fail2ban
     - grc
-    - hddtemp
     - htop
     - iftop
     - ioping
