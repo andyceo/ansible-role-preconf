@@ -13,9 +13,8 @@
 
 - name: Update and then safe upgrade installed packages
   apt:
-    update_cache=yes
-    cache_valid_time=3600
-    upgrade=yes
+    update_cache: yes
+    upgrade: yes
 
 # This is "standard system utilities" metapackage.
 # @see sudo tasksel --task-package standard
