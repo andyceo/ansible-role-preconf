@@ -16,6 +16,16 @@
     update_cache: yes
     upgrade: yes
 
+- name: Add/remove apt keys
+  apt_key:
+    id: "{{ item.value.id }}"
+    url: "{{ item.value.url }}"
+    state: "{{ item.value.state | default('present') }}"
+  with_dict: "{{ preconf.apt_keys }}"
+  when: item.value.state is defined and item.value.state != 'ignored'
+  tags:
+    - preconf-apt-keys
+
 # This is "standard system utilities" metapackage.
 # @see sudo tasksel --task-package standard
 - name: Install ubuntu standard utilities

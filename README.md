@@ -5,3 +5,8 @@ This role supposed to execute first and it checks that all packages are updated 
 ## Requirements
 
 Ubuntu 16.04
+
+
+## Tags:
+
+- **preconf-apt-keys**: only add/remove keys to/from apt keyring (use `preconf.apt_keys` configuration variable)

@@ -1,6 +1,15 @@
 ---
 
 preconf:
+  apt_keys:
+    nodesource:
+      id: 1655A0AB68576280
+      url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+      state: ignored
+    sbt:
+      id: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+      url: hkp://keyserver.ubuntu.com:80
+      state: ignored
   hostname:
     apply: no
     hostname: example
