@@ -2,9 +2,15 @@
 
 This role supposed to execute first and it checks that all packages are updated and make some adjustments to sysctl.
 
+
 ## Requirements
 
 Ubuntu 16.04
+
+
+## Configuration
+
+Configuration can be made with one variable: `preconf`, that should be a dictionary. All configuration is organized in sections, which usualy maps to tags. For example, `preconf.apt_keys` section store apt keys and them can be executed with tag `preconf-apt-keys`.
 
 
 ## Tags:
