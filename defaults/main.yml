@@ -10,6 +10,21 @@ preconf:
       id: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
       url: hkp://keyserver.ubuntu.com:80
       state: ignored
+
+  repositories:
+    nodejs_10_xenial:
+      repository: deb https://deb.nodesource.com/node_10.x xenial main
+      filename: nodesource
+      state: ignored
+    nodejs_10_xenial_src:
+      repository: deb-src https://deb.nodesource.com/node_10.x xenial main
+      filename: nodesource
+      state: ignored
+    sbt:
+      repository: deb https://dl.bintray.com/sbt/debian /
+      filename: sbt
+      state: ignored
+
   hostname:
     apply: no
     hostname: example

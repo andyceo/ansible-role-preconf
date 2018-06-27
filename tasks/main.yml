@@ -23,8 +23,31 @@
     state: "{{ item.value.state | default('present') }}"
   with_dict: "{{ preconf.apt_keys }}"
   when: item.value.state is defined and item.value.state != 'ignored'
+  register: preconf_apt_keys
   tags:
     - preconf-apt-keys
+
+- name: Add/remove apt repositories
+  apt_repository:
+    repo: "{{ item.value.repository }}"
+    filename: "{{ item.value.filename }}"
+    state: "{{ item.value.state | default('present') }}"
+    update_cache: no
+  with_dict: "{{ preconf.repositories }}"
+  when: item.value.state is defined and item.value.state != 'ignored'
+  register: preconf_apt_repositories
+  tags:
+    - preconf-apt-repositories
+
+- name: Update apt cache after adding/removing apt keys and repositories
+  apt:
+    update_cache: yes
+    upgrade: no
+  when: (preconf_apt_keys is defined and preconf_apt_keys.changed) or
+        (preconf_apt_repositories is defined and preconf_apt_repositories.changed)
+  tags:
+    - preconf-apt-keys
+    - preconf-apt-repositories
 
 # This is "standard system utilities" metapackage.
 # @see sudo tasksel --task-package standard
