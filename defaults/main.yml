@@ -25,6 +25,43 @@ preconf:
       filename: sbt
       state: ignored
 
+  package_sets:
+    common:
+      - acl
+      - curl
+      - htop
+      - mc
+      - ncdu
+      - nmap
+      - rsync
+      - screen
+      - sudo
+      - zram-config
+    server:
+      - fail2ban
+    suggested:
+      - apachetop
+      - aptitude
+      - atop
+      - dar
+      - dstat
+      - fortunes-ubuntu-server
+      - git-svn
+      - hddtemp
+      - mytop
+      - lynx
+      - p7zip
+      - rar
+      - subversion
+      # It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
+  #    - sysv-rc-conf
+      - vim
+      # visitors is not available in Ubuntu 16.04 Xenial Xerus
+  #    - visitors
+
+  package_sets_install:
+    - common
+
   hostname:
     apply: no
     hostname: example
@@ -42,54 +79,27 @@ preconf:
     # 1. In file "/etc/sysctl.conf" change/add row: "fs.inotify.max_user_watches = 524288"
     # 2. Then "sudo sysctl -p" to apply changes immediately
 #    fs.inotify.max_user_watches: 524288
-  suggested:
-    - apachetop
-    - aptitude
-    - atop
-    - dar
-    - dstat
-    - fortunes-ubuntu-server
-    - git-svn
-    - hddtemp
-    - mytop
-    - lynx
-    - p7zip
-    - rar
-    - subversion
-    # It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
-#    - sysv-rc-conf
-    - vim
-    # visitors is not available in Ubuntu 16.04 Xenial Xerus
-#    - visitors
   utilities:
-    - acl
     - apt-file
     - bc
     - ccze
-    - curl
     - facter
     - fail2ban
     - grc
-    - htop
     - iftop
     - ioping
     - iotop
     - itop
     - lm-sensors
     - lsscsi
-    - mc
     - mcelog
-    - ncdu
     - ncurses-term
     - nethogs
-    - nmap
     - powertop
     - pwgen
     - python-software-properties
     - rsnapshot
-    - rsync
     - smartmontools
-    - sudo
     - sysstat
     - tcpdump
     - tmux

@@ -49,6 +49,15 @@
     - preconf-apt-keys
     - preconf-apt-repositories
 
+- name: Installing packages
+#  debug: msg="{{ preconf.package_sets[item] }}"
+  apt:
+    pkg: "{{ preconf.package_sets[item] }}"
+    install_recommends: no
+  with_items: "{{ preconf.package_sets_install }}"
+  tags:
+    - preconf-apt-packages
+
 # This is "standard system utilities" metapackage.
 # @see sudo tasksel --task-package standard
 - name: Install ubuntu standard utilities
@@ -58,9 +67,6 @@
 
 - name: Installing intel-microcode package for processors microcode updates
   apt: pkg=intel-microcode
-
-- name: Installing zram (formely compcache)
-  apt: pkg=zram-config
 
 - name: Installing useful utilities
   apt: pkg={{ item }}

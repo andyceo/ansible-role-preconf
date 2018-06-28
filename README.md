@@ -17,3 +17,4 @@ Configuration can be made with one variable: `preconf`, that should be a diction
 
 - **preconf-apt-keys**: only add/remove keys to/from apt keyring (use `preconf.apt_keys` configuration variable)
 - **preconf-apt-repositories**: only add/remove repositories to/from apt (use `preconf.repositories` configuration variable)
+- **preconf-apt-packages**: only install package sets declared in `preconf.package_sets_install` configuration variable. The package sets itself are declared in `preconf.package_sets` configuration variable.
