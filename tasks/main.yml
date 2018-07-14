@@ -19,7 +19,8 @@
 - name: Add/remove apt keys
   apt_key:
     id: "{{ item.value.id }}"
-    url: "{{ item.value.url }}"
+    keyserver: "{{ item.value.keyserver | default(omit) }}"
+    url: "{{ item.value.url | default(omit) }}"
     state: "{{ item.value.state | default('present') }}"
   with_dict: "{{ preconf.apt_keys }}"
   when: item.value.state is defined and item.value.state != 'ignored'
