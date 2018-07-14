@@ -60,9 +60,13 @@ preconf:
       - fortunes-ubuntu-server
       - git-svn
       - hddtemp
+      # This package is not available in Ubuntu 18.04 Bionic Beaver, in spite of kernel use mcelog legacy
+#      - mcelog
       - mytop
       - lynx
       - p7zip
+      # This package is not available in Ubuntu 18.04 Bionic Beaver
+#      - python-software-properties
       - rar
       - subversion
       # It seems this package has no sense in Ubuntu 16.04 Xenial Xerus
@@ -104,12 +108,10 @@ preconf:
     - itop
     - lm-sensors
     - lsscsi
-    - mcelog
     - ncurses-term
     - nethogs
     - powertop
     - pwgen
-    - python-software-properties
     - rsnapshot
     - smartmontools
     - sysstat
