@@ -59,7 +59,6 @@ preconf:
       - dstat
       - fortunes-ubuntu-server
       - git-svn
-      - hddtemp
       # This package is not available in Ubuntu 18.04 Bionic Beaver, in spite of kernel use mcelog legacy
 #      - mcelog
       - mytop
