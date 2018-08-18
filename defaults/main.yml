@@ -1,6 +1,14 @@
 ---
 
 preconf:
+
+  # Packages to remove or purge. Executed first. The `state` or `purge` field are not required.
+  # You can use `state: ignored` for excluding some packages from removal. Purge is `False` by default.
+  packages_remove:
+    some_example_pkg:
+      purge: True
+      state: ignored
+
   apt_keys:
     nodesource:
       id: 1655A0AB68576280

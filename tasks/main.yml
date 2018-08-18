@@ -11,6 +11,16 @@
     LC_MESSAGES: en_US.UTF-8
     LC_ALL: en_US.UTF-8
 
+- name: Remove or purge packages
+  apt:
+    package: "{{ item.key }}"
+    state: absent
+    purge: "{{ item.value.purge|default(False) }}"
+  with_dict: "{{ preconf.packages_remove }}"
+  when: item.value.state is not defined or item.value.state == 'absent'
+  tags:
+    - preconf-apt-packages-remove
+
 - name: Update and then safe upgrade installed packages
   apt:
     update_cache: yes
