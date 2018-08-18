@@ -49,6 +49,7 @@
   tags:
     - preconf-apt-keys
     - preconf-apt-repositories
+    - skip_ansible_lint
 
 - name: Installing packages
 #  debug: msg="{{ preconf.package_sets[item] }}"
