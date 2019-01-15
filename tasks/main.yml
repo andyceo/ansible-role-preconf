@@ -102,6 +102,8 @@
   hostname:
     name={{ preconf.hostname.hostname }}
   when: preconf.hostname.apply
+  tags:
+    - preconf-hostname
 
 - name: Apply FQDN hostname to /etc/hosts and others hosts parameters
   template:
@@ -111,3 +113,5 @@
     group=root
     mode=0644
   when: preconf.hostname.apply
+  tags:
+    - preconf-hostname
