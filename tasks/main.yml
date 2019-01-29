@@ -81,8 +81,8 @@
   apt: pkg=intel-microcode
 
 - name: Installing useful utilities
-  apt: pkg={{ item }}
-  with_items: "{{ preconf.utilities }}"
+  apt:
+    pkg: "{{ preconf.utilities }}"
 
 - name: Remove apt outdated caches and packages
   apt:
