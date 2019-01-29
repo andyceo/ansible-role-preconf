@@ -1,4 +1,5 @@
 ---
+
 allow_duplicates: no
 
 dependencies: []
@@ -12,5 +13,5 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - xenial
-  categories:
+  galaxy_tags:
     - system
