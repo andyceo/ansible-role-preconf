@@ -20,6 +20,7 @@
   when: item.value.state is not defined or item.value.state == 'absent'
   tags:
     - preconf-apt-packages-remove
+    - preconf-apt
 
 - name: Update and then safe upgrade installed packages
   apt:
@@ -37,6 +38,7 @@
   register: preconf_apt_keys
   tags:
     - preconf-apt-keys
+    - preconf-apt
 
 - name: Add/remove apt repositories
   apt_repository:
@@ -49,6 +51,7 @@
   register: preconf_apt_repositories
   tags:
     - preconf-apt-repositories
+    - preconf-apt
 
 - name: Update apt cache after adding/removing apt keys and repositories
   apt:
@@ -59,6 +62,7 @@
   tags:
     - preconf-apt-keys
     - preconf-apt-repositories
+    - preconf-apt
     - skip_ansible_lint
 
 - name: Installing packages
@@ -69,6 +73,7 @@
   with_items: "{{ preconf.package_sets_install }}"
   tags:
     - preconf-apt-packages
+    - preconf-apt
 
 # This is "standard system utilities" metapackage.
 # @see sudo tasksel --task-package standard
