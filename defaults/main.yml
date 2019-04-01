@@ -78,6 +78,16 @@ preconf:
       filename: tor
       state: ignored
 
+    openjdk-r:
+      repository: deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu {{ ansible_distribution_release }} main
+      filename: openjdk-r
+      state: ignored
+
+    openjdk-r_src:
+      repository: deb-src http://ppa.launchpad.net/openjdk-r/ppa/ubuntu {{ ansible_distribution_release }} main
+      filename: openjdk-r
+      state: ignored
+
   package_sets:
     common:
       - acl
@@ -90,6 +100,8 @@ preconf:
       - screen
       - sudo
       - zram-config
+    openjdk-r:
+      - openjdk-11-jdk
     server:
       - fail2ban
     suggested:
