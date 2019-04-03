@@ -5,8 +5,8 @@ This role supposed to execute first and it checks that all packages are updated 
 
 ## Requirements
 
-Ubuntu 16.04
-
+Ubuntu 16.04 or
+Ubuntu 18.04
 
 ## Configuration
 
@@ -20,4 +20,5 @@ Configuration can be made with one variable: `preconf`, that should be a diction
 - **preconf-apt-repositories**: only add/remove repositories to/from apt (use `preconf.repositories` configuration variable)
 - **preconf-apt-packages**: only install package sets declared in `preconf.package_sets_install` configuration variable. The package sets itself are declared in `preconf.package_sets` configuration variable.
 - **preconf-apt**: process all apt-related tags: preconf-apt-packages-remove, preconf-apt-keys, preconf-apt-repositories, preconf-apt-packages
+- **preconf-grub**: update Grub2 settings (for now it just set `GRUB_TIMEOUT` and `GRUB_RECORDFAIL_TIMEOUT` to `2` only and explicitly)
 - **preconf-hostname**: only change node's hostname and /etc/hosts file respectively.

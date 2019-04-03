@@ -130,6 +130,12 @@ preconf:
   package_sets_install:
     - common
 
+  grub:
+    - regexp: "^[#]*GRUB_TIMEOUT="
+      line: 'GRUB_TIMEOUT=2'
+    - regexp: "^[#]*GRUB_RECORDFAIL_TIMEOUT="
+      line: 'GRUB_RECORDFAIL_TIMEOUT=2'
+
   hostname:
     apply: no
     hostname: example

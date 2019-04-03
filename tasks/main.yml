@@ -94,6 +94,24 @@
     autoclean: yes
     autoremove: yes
 
+- name: Alter grub file
+  lineinfile:
+    dest: /etc/default/grub
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+    backup: yes
+  with_items: "{{ preconf.grub }}"
+  register: preconf_grub
+  tags:
+    - preconf-grub
+
+- name: Update grub
+  command: update-grub
+  when: preconf_grub is changed
+  tags:
+    - preconf-grub
+
 - name: Apply sysctl settings
   sysctl:
     name={{ item.key }}
