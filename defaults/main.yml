@@ -136,6 +136,23 @@ preconf:
     - regexp: "^[#]*GRUB_RECORDFAIL_TIMEOUT="
       line: 'GRUB_RECORDFAIL_TIMEOUT=2'
 
+  systemd:
+    services:
+      # sleep.target suspend.target hibernate.target hybrid-sleep.target are masked for disabling
+      # suspend and hibernation. Commands ignored by default, enable it in your appropriate host group.
+      'sleep.target':
+        masked: yes
+        ignored: yes
+      'suspend.target':
+        masked: yes
+        ignored: yes
+      'hibernate.target':
+        masked: yes
+        ignored: yes
+      'hybrid-sleep.target':
+        masked: yes
+        ignored: yes
+
   hostname:
     apply: no
     hostname: example

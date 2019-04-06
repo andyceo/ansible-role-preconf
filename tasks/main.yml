@@ -111,9 +111,20 @@
 
 - name: Apply sysctl settings
   sysctl:
-    name={{ item.key }}
-    value={{ item.value }}
+    name: "{{ item.key }}"
+    value: "{{ item.value }}"
   with_dict: "{{ preconf.sysctl }}"
+
+- name: Apply systemd services settings
+  systemd:
+    service: "{{ item.key }}"
+    enabled: "{{ item.value.enabled | default(omit) }}"
+    masked: "{{ item.value.masked | default(omit) }}"
+  with_dict: "{{ preconf.systemd.services }}"
+  when: item.value.ignored is not defined or not item.value.ignored
+  tags:
+    - preconf-systemd
+    - preconf-systemd-services
 
 # The hostname service runs hostname -b -F /etc/hostname (see /etc/init/hostname.conf), which exits after setting
 # the hostname, so it doesn't continue running. The following is not working on Ubuntu 16.04 Xenial:
