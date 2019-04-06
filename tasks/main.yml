@@ -82,9 +82,6 @@
     pkg=ubuntu-standard
     install_recommends=yes
 
-- name: Installing intel-microcode package for processors microcode updates
-  apt: pkg=intel-microcode
-
 - name: Installing useful utilities
   apt:
     pkg: "{{ preconf.utilities }}"
