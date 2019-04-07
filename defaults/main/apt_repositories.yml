@@ -12,6 +12,11 @@ preconf:
       filename: ansible
       state: ignored
 
+    dropbox:
+      repository: deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu {{ ansible_distribution_release }} main
+      filename: dropbox
+      state: ignored
+
     bitcoin:
       repository: deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu {{ ansible_distribution_release }} main
       filename: bitcoin
@@ -20,6 +25,16 @@ preconf:
     bitcoin_src:
       repository: deb-src http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu {{ ansible_distribution_release }} main
       filename: bitcoin
+      state: ignored
+
+    cubic:
+      repository: deb http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
+      filename: cubic
+      state: ignored
+
+    cubic_src:
+      repository: deb-src http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
+      filename: cubic
       state: ignored
 
     nodejs_10:
@@ -65,14 +80,4 @@ preconf:
     openjdk-r_src:
       repository: deb-src http://ppa.launchpad.net/openjdk-r/ppa/ubuntu {{ ansible_distribution_release }} main
       filename: openjdk-r
-      state: ignored
-
-    cubic:
-      repository: deb http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
-      filename: cubic
-      state: ignored
-
-    cubic_src:
-      repository: deb-src http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
-      filename: cubic
       state: ignored

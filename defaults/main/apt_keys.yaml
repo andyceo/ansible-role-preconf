@@ -1,35 +1,48 @@
 ---
 preconf:
   apt_keys:
+
     ansible:
       id: 6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367
       keyserver: keyserver.ubuntu.com
       state: ignored
+
     bitcoin:
       id: C70EF1F0305A1ADB9986DBD8D46F45428842CE5E
       keyserver: keyserver.ubuntu.com
       state: ignored
+
+    cubic:
+      id: B7579F80E494ED3406A59DF9081525E2B4F1283B
+      keyserver: keyserver.ubuntu.com
+      state: ignored
+
+    dropbox:
+      id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+      keyserver: pgp.mit.edu
+      state: ignored
+
     nodesource:
       id: 1655A0AB68576280
       url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
       state: ignored
+
     sbt:
       id: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
       keyserver: keyserver.ubuntu.com
       state: ignored
+
     influxdata:
       id: 2582E0C5
       url: https://repos.influxdata.com/influxdb.key
       state: ignored
+
     tor:
       id: A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
       url: https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc
       state: ignored
+
     openjdk-r:
       id: DA1A4A13543B466853BAF164EB9B1D8886F44E2A
-      keyserver: keyserver.ubuntu.com
-      state: ignored
-    cubic:
-      id: B7579F80E494ED3406A59DF9081525E2B4F1283B
       keyserver: keyserver.ubuntu.com
       state: ignored
