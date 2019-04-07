@@ -37,16 +37,6 @@ preconf:
       filename: tor
       state: ignored
 
-    tor_stable_xenial:
-      repository: deb https://deb.torproject.org/torproject.org xenial main
-      filename: tor
-      state: ignored
-
-    tor_stable_xenial_src:
-      repository: deb-src https://deb.torproject.org/torproject.org xenial main
-      filename: tor
-      state: ignored
-
     openjdk-r:
       repository: deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu {{ ansible_distribution_release }} main
       filename: openjdk-r
