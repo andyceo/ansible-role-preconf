@@ -2,6 +2,16 @@
 preconf:
   repositories:
 
+    ansible:
+      repository: deb http://ppa.launchpad.net/ansible/ansible/ubuntu {{ ansible_distribution_release }} main
+      filename: ansible
+      state: ignored
+
+    ansible_src:
+      repository: deb-src http://ppa.launchpad.net/ansible/ansible/ubuntu {{ ansible_distribution_release }} main
+      filename: ansible
+      state: ignored
+
     nodejs_10:
       repository: deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main
       filename: nodesource
