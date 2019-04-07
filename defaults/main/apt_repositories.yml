@@ -56,3 +56,13 @@ preconf:
       repository: deb-src http://ppa.launchpad.net/openjdk-r/ppa/ubuntu {{ ansible_distribution_release }} main
       filename: openjdk-r
       state: ignored
+
+    cubic:
+      repository: deb http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
+      filename: cubic
+      state: ignored
+
+    cubic_src:
+      repository: deb-src http://ppa.launchpad.net/cubic-wizard/release/ubuntu {{ ansible_distribution_release }} main
+      filename: cubic
+      state: ignored
