@@ -21,3 +21,7 @@ preconf:
       id: DA1A4A13543B466853BAF164EB9B1D8886F44E2A
       keyserver: keyserver.ubuntu.com
       state: ignored
+    cubic:
+      id: B7579F80E494ED3406A59DF9081525E2B4F1283B
+      keyserver: keyserver.ubuntu.com
+      state: ignored
