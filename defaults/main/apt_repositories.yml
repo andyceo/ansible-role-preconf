@@ -12,6 +12,16 @@ preconf:
       filename: ansible
       state: ignored
 
+    bitcoin:
+      repository: deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu {{ ansible_distribution_release }} main
+      filename: bitcoin
+      state: ignored
+
+    bitcoin_src:
+      repository: deb-src http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu {{ ansible_distribution_release }} main
+      filename: bitcoin
+      state: ignored
+
     nodejs_10:
       repository: deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main
       filename: nodesource
