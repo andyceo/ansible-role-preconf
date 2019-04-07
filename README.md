@@ -24,3 +24,4 @@ Configuration can be made with one variable: `preconf`, that should be a diction
 - **preconf-hostname**: only change node's hostname and /etc/hosts file respectively.
 - **preconf-systemd**: run systemd-related tasks
 - **preconf-systemd-services**: set up systemd services with defined params
+- **preconf-lid**: disable lid switch handling (usefull for notebooks that functioning as a server)

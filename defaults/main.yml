@@ -153,6 +153,9 @@ preconf:
         masked: yes
         ignored: yes
 
+  lid:
+    switchignore: no
+
   hostname:
     apply: no
     hostname: example

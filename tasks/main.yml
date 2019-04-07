@@ -126,6 +126,14 @@
     - preconf-systemd
     - preconf-systemd-services
 
+- name: Ignore lid close event
+  lineinfile:
+    dest=/etc/systemd/logind.conf
+    line="HandleLidSwitch=ignore"
+  when: preconf.lid.switchignore is defined and preconf.lid.switchignore
+  tags:
+    - preconf-lid
+
 # The hostname service runs hostname -b -F /etc/hostname (see /etc/init/hostname.conf), which exits after setting
 # the hostname, so it doesn't continue running. The following is not working on Ubuntu 16.04 Xenial:
 # sudo service hostname restart
