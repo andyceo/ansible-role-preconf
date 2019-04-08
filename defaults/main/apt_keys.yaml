@@ -37,6 +37,11 @@ preconf:
       url: https://repos.influxdata.com/influxdb.key
       state: ignored
 
+    nextcloud:
+      id: 1FCD77DD0DBEF5699AD2610160EE47FBAD3DD469
+      keyserver: keyserver.ubuntu.com
+      state: ignored
+
     tor:
       id: A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
       url: https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc

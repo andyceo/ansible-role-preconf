@@ -37,6 +37,16 @@ preconf:
       filename: cubic
       state: ignored
 
+    nextcloud:
+      repository: deb http://ppa.launchpad.net/nextcloud-devs/client/ubuntu {{ ansible_distribution_release }} main
+      filename: nextcloud
+      state: ignored
+
+    nextcloud_src:
+      repository: deb-src http://ppa.launchpad.net/nextcloud-devs/client/ubuntu {{ ansible_distribution_release }} main
+      filename: nextcloud
+      state: ignored
+
     nodejs_10:
       repository: deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main
       filename: nodesource
