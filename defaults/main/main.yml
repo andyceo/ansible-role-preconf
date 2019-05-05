@@ -12,6 +12,7 @@ preconf:
   package_sets:
     common:
       - acl
+      - cpuid
       - curl
       - htop
       - mc
