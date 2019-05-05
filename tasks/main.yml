@@ -27,6 +27,13 @@
     update_cache: yes
     upgrade: yes
 
+- name: Install apt-key dependency (gnupg)
+  apt:
+    package: gnupg
+  tags:
+    - preconf-apt-keys
+    - preconf-apt
+
 - name: Add/remove apt keys
   apt_key:
     id: "{{ item.value.id }}"

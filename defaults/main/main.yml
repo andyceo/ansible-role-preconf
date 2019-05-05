@@ -15,6 +15,7 @@ preconf:
       - cpuid
       - curl
       - htop
+      - gnupg
       - mc
       - ncdu
       - nmap
