@@ -21,6 +21,7 @@ preconf:
       - nmap
       - rsync
       - screen
+      - stress
       - sudo
       - zram-config
     openjdk-r:
