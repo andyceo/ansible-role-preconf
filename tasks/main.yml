@@ -121,6 +121,8 @@
     name: "{{ item.key }}"
     value: "{{ item.value }}"
   with_dict: "{{ preconf.sysctl }}"
+  tags:
+    - preconf-sysctl
 
 - name: Apply systemd services settings
   systemd:
