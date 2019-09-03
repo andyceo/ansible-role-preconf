@@ -102,8 +102,8 @@
   lineinfile:
     dest: /etc/default/grub
     regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-    state: present
+    line: "{{ item.line | default(omit) }}"
+    state: "{{ item.state | default('present') }}"
     backup: yes
   with_items: "{{ preconf.grub }}"
   register: preconf_grub
