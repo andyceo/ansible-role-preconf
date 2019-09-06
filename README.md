@@ -5,8 +5,10 @@ This role supposed to execute first and it checks that all packages are updated 
 
 ## Requirements
 
-Ubuntu 16.04 or
-Ubuntu 18.04
+Supported operating systems:
+
+- Ubuntu 16.04
+- Ubuntu 18.04
 
 ## Configuration
 
