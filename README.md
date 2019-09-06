@@ -5,10 +5,8 @@ This role supposed to execute first and it checks that all packages are updated 
 
 ## Requirements
 
-Supported operating systems:
+Supported operating systems: see https://github.com/andyceo/ansible-role-preconf/blob/master/meta/main.yml#L12
 
-- Ubuntu 16.04
-- Ubuntu 18.04
 
 ## Configuration
 
