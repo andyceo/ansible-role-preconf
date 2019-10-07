@@ -21,8 +21,9 @@ Configuration can be made with one variable: `preconf`, that should be a diction
 - **preconf-apt-packages**: only install package sets declared in `preconf.package_sets_install` configuration variable. The package sets itself are declared in `preconf.package_sets` configuration variable.
 - **preconf-apt**: process all apt-related tags: preconf-apt-packages-remove, preconf-apt-keys, preconf-apt-repositories, preconf-apt-packages
 - **preconf-grub**: update Grub2 settings (for now it just set `GRUB_TIMEOUT` and `GRUB_RECORDFAIL_TIMEOUT` to `2` only and explicitly)
-- **preconf-hostname**: only change node's hostname and /etc/hosts file respectively.
 - **preconf-sysctl**: managing `sysctl` entries
+- **preconf-crons**: create/update/delete crons
+- **preconf-hostname**: only change node's hostname and /etc/hosts file respectively.
 - **preconf-systemd**: run systemd-related tasks
 - **preconf-systemd-services**: set up systemd services with defined params
 - **preconf-lid**: disable lid switch handling (usefull for notebooks that functioning as a server)

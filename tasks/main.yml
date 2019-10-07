@@ -124,6 +124,31 @@
   tags:
     - preconf-sysctl
 
+- name: Establish cron jobs
+  cron:
+    name: "{{ item.key }}"
+    state: "{{ item.value.state }}"
+    weekday: "{{ item.value.weekday | default(omit) }}"
+    minute: "{{ item.value.minute | default(omit) }}"
+    hour: "{{ item.value.hour | default(omit) }}"
+    user: "{{ item.value.user | default(omit) }}"
+    job: "{{ item.value.job | default(omit) }}"
+    cron_file: "{{ item.value.cron_file | default(omit) }}"
+  with_dict: "{{ preconf.crons }}"
+  when: item.value.state is defined and item.value.state != 'ignored'
+  tags:
+    - preconf-crons
+
+- name: Delete absent cron jobs files (that shoud be empty already)
+  file:
+    path: "/etc/cron.d/{{ item.value.cron_file }}"
+    state: absent
+  with_dict: "{{ preconf.crons }}"
+  when: item.value.state is defined and item.value.state == 'absent' and
+        item.value.user is defined and item.value.cron_file is defined
+  tags:
+    - preconf-crons
+
 - name: Apply systemd services settings
   systemd:
     service: "{{ item.key }}"
