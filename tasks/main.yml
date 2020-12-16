@@ -25,7 +25,7 @@
 - name: Update and then safe upgrade installed packages
   apt:
     update_cache: yes
-    upgrade: yes
+    upgrade: safe
 
 - name: Install apt-key dependency (gnupg)
   apt:
