@@ -101,6 +101,7 @@ preconf:
     - apt-file
     - bc
     - ccze
+    - curl
     - facter
     - fail2ban
     - grc
@@ -118,7 +119,6 @@ preconf:
     - smartmontools
     - sysstat
     - tcpdump
-    - tmux
     - traceroute
     - tree
     - wget
