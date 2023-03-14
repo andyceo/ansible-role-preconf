@@ -19,11 +19,12 @@ preconf:
       - mc
       - ncdu
       - nmap
+      - python-is-python3
       - rsync
       - screen
       - stress
       - sudo
-      - zram-config
+      # - zram-config  # disable in favour of zswap that enabled by default in modern kernels (from Ubuntu 22.04)
     openjdk-r:
       - openjdk-11-jdk
     server:
@@ -102,6 +103,7 @@ preconf:
     - bc
     - ccze
     - curl
+    - deborphan
     - facter
     - fail2ban
     - grc
