@@ -104,7 +104,6 @@ preconf:
     - ccze
     - curl
     - deborphan
-    - facter
     - fail2ban
     - grc
     - iftop
